@@ -24,6 +24,11 @@ services:
       - ../learn_lar10:/var/www
     ports:
       - "9000:9000"
+      - "9003:9003"
+    environment:
+      PHP_IDE_CONFIG: "serverName=laravel10"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - laravel10
 
